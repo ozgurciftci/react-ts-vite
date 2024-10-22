@@ -10,6 +10,7 @@ import {Providers} from "./context/Providers.tsx";
 import {ProtectedRoute} from "./components/ProtectedRoute.tsx";
 import {LoginPage} from "./pages/Login.tsx";
 import {CounterWithState} from "./features/counter/CounterWithState.tsx";
+import {StarshipPage} from "./pages/Starship.tsx";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                         <Route path="/products" element={<ProductsPage/>}/>
                         <Route path="/login" element={<LoginPage/>}/>
                         <Route path="/counter-with-state" element={<CounterWithState/>}/>
+                        <Route path="/starships" element={<StarshipPage/>}/>
                     </Routes>
                 </Providers>
 

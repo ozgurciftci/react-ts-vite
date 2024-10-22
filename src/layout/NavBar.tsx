@@ -53,6 +53,9 @@ export const Navbar: FC = () => {
                 <Link to="/login">
                     <StyledLinkButton>Login</StyledLinkButton>
                 </Link>
+                <Link to="/starships">
+                    <StyledLinkButton>Starships</StyledLinkButton>
+                </Link>
             </Toolbar>
         </StyledAppBar>
     );

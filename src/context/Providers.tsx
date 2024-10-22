@@ -5,6 +5,7 @@ import {UserProvider} from "./UserContext.tsx";
 import {ReactNode} from "react";
 import {CounterProvider} from "./CounterContext.tsx";
 import {ProductProvider} from "./ProductContext.tsx";
+import {StarshipProvider} from "./StarshipContext.tsx";
 
 export const Providers = ({children}: { children: ReactNode }) => {
     return (
@@ -13,7 +14,9 @@ export const Providers = ({children}: { children: ReactNode }) => {
                 <UserProvider>
                     <ProductProvider>
                         <CounterProvider>
+                            <StarshipProvider>
                             {children}
+                            </StarshipProvider>
                         </CounterProvider>
                     </ProductProvider>
                 </UserProvider>

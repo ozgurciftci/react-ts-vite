@@ -7,13 +7,13 @@ import {Box, Button, TextField} from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 interface LoginFormInputs {
-    email: string;
+    username: string;
     password: string;
 }
 
 // Login schema
 const schema = yup.object().shape({
-    email: yup.string().required('username is required'),
+    username: yup.string().required('username is required'),
     password: yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
 })
 
@@ -25,11 +25,11 @@ export const LoginPage = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const onSubmit = async (data: LoginFormInputs) => {
         try {
-            const response = await loginUser(data.email, data.password);  // Attempt login
+            const response = await loginUser(data.username, data.password);  // Attempt login
             console.log('anansi login response: ', response)
         } catch (error: unknown) {
-            // @ts-expect-error-ignore
-            setErrorMessage(`Invalid email or password: ${error.message}`);  // Display error on failure
+            console.log(error)
+            setErrorMessage(`Invalid email or password`);  // Display error on failure
         }
     };
 
@@ -58,11 +58,11 @@ export const LoginPage = () => {
             }}>
                 <Box sx={{marginBottom: '15px'}}>
                     <TextField
-                        label="Email"
+                        label="Username"
                         fullWidth
-                        {...register('email')}
-                        error={!!errors.email}
-                        helperText={errors.email?.message}
+                        {...register('username')}
+                        error={!!errors.username}
+                        helperText={errors.username?.message}
                     />
                 </Box>
                 <Box sx={{marginBottom: '15px'}}>

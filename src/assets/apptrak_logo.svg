@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+    <defs>
+        <linearGradient id="apptrak_gradient" x1="40%" y1="20%" x2="100%" y2="80%">
+            <stop offset="0%" stop-color="#BD34FE">
+            </stop>
+            <stop offset="100%" stop-color="#41D1FF">
+            </stop>
+        </linearGradient>
+    </defs>
+    <path d="M128 20 L230 210 L128 150 L26 210 Z" fill="url(#apptrak_gradient)" />
+</svg>
